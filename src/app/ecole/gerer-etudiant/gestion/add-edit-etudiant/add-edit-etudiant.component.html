@@ -1,0 +1,40 @@
+<div class="form-froup row">
+    <div class="col-sm-10">
+        <label class="col-sm-5 col-form-label">Etudiant Matricule</label>
+        <input type="text" class="form-control" [(ngModel)]="MATRICULE" placeholder="Enter Etudiant matricule">
+        <label class="col-sm-5 col-form-label">Etudiant Name</label>
+        <input type="text" class="form-control" [(ngModel)]="NOM_PRENOM" placeholder="Enter Etudiant nom prenom">
+        <label class="col-sm-5 col-form-label">Etudiant CIN</label>
+        <input type="text" class="form-control" [(ngModel)]="CIN" placeholder="Enter Etudiant cin">
+        <label class="col-sm-5 col-form-label">Etudiant numero telephone</label>
+        <input type="text" class="form-control" [(ngModel)]="TEL" placeholder="Enter Etudiant numero telephone">
+        <label class="col-sm-5 col-form-label">Etudiant date naissance</label>
+        <input type="date" class="form-control" [(ngModel)]="DATE_NAISSANCE" placeholder="Enter date naissance">
+        <label class="col-sm-5 col-form-label">Etudiant Adresse</label>
+        <input type="text" class="form-control" [(ngModel)]="ADRESSE" placeholder="Enter Etudiant adresse">
+        <label class="col-sm-5 col-form-label">Remarque</label>
+        <input type="text" class="form-control" [(ngModel)]="REMARQUE" placeholder="Enter votre remarque">
+        <label class="col-sm-5 col-form-label">Etudiant Passport</label>
+        <input type="text" class="form-control" [(ngModel)]="PASSPORT" placeholder="Enter Etudiant passport">
+        <label class="col-sm-5 col-form-label">Etudiant sexe</label>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              Homme
+            </label>
+            &nbsp;&nbsp;&nbsp;
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+            <label class="form-check-label" for="flexRadioDefault2">
+              Femme
+            </label>
+          </div>
+          
+    </div>
+</div>
+<button (click)="addEtudiant()" *ngIf="etd.ID_ETUDIANT==0" style="background-color: #6264a7; border-color: white;" class="btn btn-primary">
+    Add
+</button>
+<button (click)="updateEtudiant()" *ngIf="etd.ID_ETUDIANT!=0" style="background-color: #6264a7; border-color: white;" class="btn btn-primary">
+    Update 
+</button>

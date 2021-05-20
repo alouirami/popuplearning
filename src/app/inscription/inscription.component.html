@@ -1,0 +1,64 @@
+
+  <div class="container">
+    <img class="center" [src]="cheminLogo"/>
+    <img style="width: 300px;
+    height: 280px;
+    float: right;
+    position: absolute;
+    top: 420px;
+    right: 120px;" [src]="image1"/>
+    <img style="width: 300px;
+    height: 280px;
+    float: right;
+    position: absolute;
+    top: 60px;
+    right: 120px;" [src]="image2"/>
+    <img style="width: 300px;
+    height: 280px;
+    float: right;
+    position: absolute;
+    top: 60px;
+    left: 120px;" [src]="image3"/>
+    <img style="width: 300px;
+    height: 280px;
+    float: right;
+    position: absolute;
+    top: 420px;
+    left: 120px;" [src]="image4"/>
+    <a href="https://www.vnext-consulting.net" target="_blank">
+      <img id="it" style="height: 25px;
+      width: auto;
+      float: right;
+      position: absolute;
+      top: 720px;
+      left: 10px;" [src]="vnext"/></a>
+     <div id="absoluteCenteredDiv">
+       
+           <div class="box">
+            <div>
+                <input type="radio" id="Ecole"
+                name="User" value="Ecole">
+                <label >Ecole</label>
+            
+                <input type="radio" id="Professeur"
+                name="User" value="Professeur">
+                <label >Professeur</label>
+            
+                <input type="radio" id="Eleve"
+                name="User"  value="Eleve">
+                <label >Eleve</label>
+              </div>
+               <label>nom prenom</label><br>
+               <input class="username" #NameInput name="username" type="text"  placeholder="Enter votre nom et votre prenom">
+               <label>mot de passe</label>
+               <input class="username" #PsdNameInput name="Password" type="password" placeholder="Enter votre  mot de passe" >
+               <label>matricule</label><br>
+               <input class="username" #MatNameInput name="username" type="text" placeholder="Enter votre  MATRICULE">
+               <button  class="btn" id="btn" (click)="add()" >s'inscrire</button>
+               
+               <a routerLink=""><div id="btn2">login</div></a>
+           </div>
+   </div> 
+    
+ </div>
+

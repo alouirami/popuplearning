@@ -1,0 +1,66 @@
+<div>
+  
+  <app-screen-share></app-screen-share>
+</div>
+<div style="position:absolute;
+
+top:70px;padding-left: 752px;">
+    <div class="row">
+      
+      <hr>
+    </div>
+    
+    <div style="padding-left: 485px;font-family:segoe;">
+      <table><tr *ngFor="let dataItem of EtudiantMsgList">
+        <td>{{dataItem}}</td>
+       </tr></table>
+    </div>
+    <div class="row">
+      <div class="well" style="height:200px; padding:15px; padding-left: 500px; font-family: segoe;">{{messageArray}}
+        <div *ngFor="let item of messageArray">
+          <div class="message-orange">
+            <p class="message-content">{{item.message}}</p>
+            <div class="message-timestamp-right">{{item.user}}</div>
+        </div>
+        </div>
+        <div style="display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -290px;
+    margin-top: 260px;
+    ">
+      <div style="width:800px" class="input-group mb-3" >
+        <div class="col-sm-2"><label style="padding: .375rem .75rem;color: #464775;
+          background-color: #bbbcdd;
+          ">
+          <i class="large  material-icons">note_add</i>Upload <input type="file" (change)="uploadFile($event)" hidden>
+      </label></div>
+        <!-- Prepend the following content to the input box -->            
+        <div class="input-group-prepend">
+
+            <!-- Declare two buttons -->
+            <button style="padding: .375rem .75rem;box-shadow: 0 0.2rem 0.4rem -0.075rem rgb(0 0 0 / 25%);
+            background: #6264a7;
+            border: 0;
+            
+            color: #fff;" type="button" (click)="sendMessage()"><i class="medium material-icons">send</i>Message</button>
+            <button style="padding: .375rem .75rem;box-shadow: 0 0.2rem 0.4rem -0.075rem rgb(0 0 0 / 25%);
+            background: #6264a7;
+            border: 0;
+            
+            color: #fff;" type="button" (click)="addDiscussFileEtd()"><i class="medium material-icons">send</i>File</button>
+        </div>
+
+        <!-- Declare an input box -->
+        <input type="text" class="col-sm-3" [(ngModel)]="messageText">
+        
+    </div>
+      
+      
+    </div>
+      </div>
+    </div>
+    
+  </div>
+  

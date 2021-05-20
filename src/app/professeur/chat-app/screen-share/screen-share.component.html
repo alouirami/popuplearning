@@ -1,0 +1,47 @@
+<div>
+ 
+
+  <!-- Video & screen share container -->
+  
+  <div style="display: flex;
+  
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: 0px;">
+    <div style="    margin-right: -15px;">
+      <div class="col-sm-2">
+        <div class="form-group"  *ngFor="let item of EmployeNameList">
+          <label for="username">Username</label>
+          <input type="text" value={{item}} #EmpNameInput id="username" name="username" disabled> 
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="form-group"  *ngFor="let item of ReunionNameList">
+          <label for="room">Room</label>
+          <input type="text" value={{item}}  id="room" name="room" disabled>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        
+      </div>
+    </div>
+     <div class="col sm-2">
+      <div style="margin-top:19px;">
+        <button class="button" class="btn btn-primary" style="background-color: #6264a7;border-color: #6264a7;"  (mousedown)="connectWithPeer()"  (mouseup)="join()" >Démarer </button>
+        &nbsp;&nbsp;
+    <button class="button" class="btn btn-primary" style="background-color: #6264a7;border-color: #6264a7;" (click)="screenShare()">Screen share</button>
+    <button type="button" class="btn btn-default"  (click)="leave()">Leave</button>
+      </div>
+    </div>
+  </div>
+  <div style="width: 643px; height: 483px; border: 2px solid;margin-left: 15px; " id="remote-video"></div>
+
+  <br>
+  <div style="margin-top: 0px;">
+   
+  </div>
+</div>

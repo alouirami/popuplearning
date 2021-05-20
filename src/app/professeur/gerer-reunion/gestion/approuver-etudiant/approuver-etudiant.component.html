@@ -1,0 +1,23 @@
+<div class="form-froup row">
+    
+    <div class="col-sm-10">
+        <select class="form-control" [(ngModel)]="etd">
+            <option>--select--</option>
+            <option *ngFor="let etdName of EtudiantList" [value]="etdName.ID_ETUDIANT">
+                {{etdName.NOM_PRENOM}}
+            </option>
+        </select>
+        <select class="form-control" [(ngModel)]="Reunion"  >
+            <option>--select--</option>
+            <option *ngFor="let runName of ReunionList" [value]="runName.ID_REUNION">
+                {{runName.NOM}}
+            </option>
+        </select>
+        
+             
+    </div>
+</div>
+<button (click)="addReunionEtudiant()"   style="background-color: #6264a7; border-color: white;"class="btn btn-primary">
+    Add
+</button>
+
